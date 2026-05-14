@@ -774,10 +774,10 @@
         <div class="card glow stats">
           <p class="eyebrow">By the numbers</p>
           <div class="stats-grid">
-            <div><div class="stat-num" data-counter="7" data-suffix="+">0+</div><div class="stat-lab">Projects shipped</div></div>
-            <div><div class="stat-num" data-counter="0.91" data-decimals="2">0.00</div><div class="stat-lab">BERT classifier F1</div></div>
-            <div><div class="stat-num" data-counter="84" data-suffix="%">0%</div><div class="stat-lab">RAG hallucination ↓</div></div>
-            <div><div class="stat-num">4<span style="color:var(--ink-3)">/4</span></div><div class="stat-lab">AIS3 categories solved</div></div>
+            <div><div class="stat-num" data-counter="96.26" data-decimals="2" data-suffix="%">0%</div><div class="stat-lab">Paper detection accuracy</div></div>
+            <div><div class="stat-num" data-counter="0.9406" data-decimals="4">0.0000</div><div class="stat-lab">Paper F1 score</div></div>
+            <div><div class="stat-num" data-counter="20" data-suffix="KB">0KB</div><div class="stat-lab">Classifier model size</div></div>
+            <div><div class="stat-num">AIS3<span style="color:var(--accent); font-size:0.55em; margin-left:6px;">'24</span></div><div class="stat-lab">Cybersecurity alum</div></div>
           </div>
         </div>
 
@@ -1007,49 +1007,17 @@
           <div class="top">
             <div>
               <div class="repo">claude-finance</div>
-              <div class="blurb">A tool-using AI agent that reads bank statements.</div>
+              <div class="blurb">Self-learning demo of Claude tool-use for personal finance.</div>
             </div>
-            <span class="badge tag-ai">AI</span>
+            <span class="badge tag-ai">Learning</span>
           </div>
-          <p class="desc">Conversational personal-finance agent. 6 typed tools wrap pandas + SQLite. Hallucination 22% → 4%.</p>
+          <p class="desc">A small personal practice project: experimenting with Anthropic Claude API&rsquo;s tool-use to wrap pandas helpers and answer questions about my own bank statement CSVs.</p>
           <ul>
-            <li>~30 min/wk manual budgeting → under 2 min</li>
-            <li>Avg 1.8 tool calls per query</li>
+            <li>Hands-on with the Claude API tool-use loop</li>
+            <li>Practiced wrapping Python helpers as typed tools</li>
           </ul>
           <div class="stack">
-            <span class="chip">Python</span><span class="chip">Claude API</span><span class="chip">FastAPI</span>
-          </div>
-        </article>
-
-        <!-- rag-notes -->
-        <article class="card glow pcard reveal">
-          <div class="mock t2">
-            <div class="lights"><span></span><span></span><span></span></div>
-            <div style="font-family:'JetBrains Mono', monospace; font-size:11px; color:#ddd6fe;">? What is 3NF in db?</div>
-            <div style="margin-top:8px; padding:8px; border:1px solid rgba(192,132,252,0.25); border-radius:8px; background:rgba(10,11,15,0.6);">
-              <div style="height:4px; border-radius:2px; background:rgba(255,255,255,0.15); width:90%;"></div>
-              <div style="height:4px; border-radius:2px; background:rgba(255,255,255,0.15); width:75%; margin-top:4px;"></div>
-              <div style="height:4px; border-radius:2px; background:rgba(255,255,255,0.15); width:60%; margin-top:4px;"></div>
-              <div style="display:flex; gap:4px; margin-top:8px;">
-                <span style="font-size:8.5px; padding:1px 5px; border-radius:4px; background:rgba(192,132,252,0.25); color:#ddd6fe;">[db.pdf:p12]</span>
-                <span style="font-size:8.5px; padding:1px 5px; border-radius:4px; background:rgba(192,132,252,0.25); color:#ddd6fe;">[notes.md]</span>
-              </div>
-            </div>
-          </div>
-          <div class="top">
-            <div>
-              <div class="repo">rag-notes</div>
-              <div class="blurb">RAG knowledge base over my notes — with citations.</div>
-            </div>
-            <span class="badge tag-ai">AI</span>
-          </div>
-          <p class="desc">Hybrid BM25 + vector search with cross-encoder rerank and citation-required prompting.</p>
-          <ul>
-            <li>Hallucination 38% → 6% on a 50-question eval</li>
-            <li>Citation accuracy 94%</li>
-          </ul>
-          <div class="stack">
-            <span class="chip">LangChain</span><span class="chip">Chroma</span><span class="chip">OpenAI Emb.</span>
+            <span class="chip">Python</span><span class="chip">Claude API</span><span class="chip">pandas</span>
           </div>
         </article>
 
@@ -1070,7 +1038,7 @@
                 <div style="height:100%; width:91%; background:linear-gradient(to right, #fb7185, #fbbf24);"></div>
               </div>
               <div style="display:flex; justify-content:space-between; margin-top:4px; font-size:10px;">
-                <span style="color:var(--ink-3);">F1 = 0.91</span>
+                <span style="color:var(--ink-3);">Chinese BERT</span>
                 <span style="color:#fecaca; font-weight:500;">FRAUD</span>
               </div>
             </div>
@@ -1078,14 +1046,14 @@
           <div class="top">
             <div>
               <div class="repo">FakeAdDetector</div>
-              <div class="blurb">Fine-tuned BERT classifier flagging deceptive ads.</div>
+              <div class="blurb">Fine-tuned Chinese BERT classifier flagging deceptive ads.</div>
             </div>
             <span class="badge tag-ai">AI</span>
           </div>
-          <p class="desc">1,200 hand-labeled Taiwanese ads. Streamlit demo with attention-rollout highlights.</p>
+          <p class="desc">Trained a Chinese-BERT text classifier and built a Streamlit demo for pasting ad copy and inspecting risk-score output.</p>
           <ul>
-            <li>F1 = 0.91 (P 0.89 · R 0.93)</li>
-            <li>+23% over TF-IDF baseline</li>
+            <li>Fine-tuning <code>bert-base-chinese</code> for fraud detection</li>
+            <li>Streamlit demo for live testing</li>
           </ul>
           <div class="stack">
             <span class="chip">HuggingFace</span><span class="chip">Streamlit</span>
@@ -1115,17 +1083,17 @@
           <div class="top">
             <div>
               <div class="repo">stock_tracker</div>
-              <div class="blurb">Full-stack dashboard with AI daily notes.</div>
+              <div class="blurb">Learning Python data viz with a personal stock watchlist.</div>
             </div>
-            <span class="badge tag-fs">Full-Stack</span>
+            <span class="badge tag-fs">Learning</span>
           </div>
-          <p class="desc">Watchlist with RSI/MACD/Bollinger overlays. Nightly Gemini summary, LINE alerts on >2σ moves.</p>
+          <p class="desc">Self-learning project: practiced pulling market data with yfinance and plotting common technical indicators (RSI, MACD) for my own watchlist.</p>
           <ul>
-            <li>Typed REST API end-to-end</li>
-            <li>Daily AI summary cost &lt; NT$1</li>
+            <li>Practiced Python data pipelines</li>
+            <li>Hands-on with yfinance + Plotly charts</li>
           </ul>
           <div class="stack">
-            <span class="chip">Next.js</span><span class="chip">Gemini</span><span class="chip">yfinance</span>
+            <span class="chip">Python</span><span class="chip">yfinance</span><span class="chip">Plotly</span>
           </div>
         </article>
 
@@ -1155,16 +1123,17 @@
           <div class="top">
             <div>
               <div class="repo">iot_data</div>
-              <div class="blurb">Edge → cloud → LLM air-quality pipeline.</div>
+              <div class="blurb">IoT learning project — sensors → cloud → notifications.</div>
             </div>
-            <span class="badge tag-iot">IoT</span>
+            <span class="badge tag-iot">Learning</span>
           </div>
-          <p class="desc">ESP32 streams sensors over MQTT. Threshold checker prompts Gemini, pushes to LINE.</p>
+          <p class="desc">Self-learning project: practiced streaming ESP32 sensor readings over MQTT and exploring how to wire an edge device into a simple notification flow.</p>
           <ul>
-            <li>Avg 2.3 min from anomaly to LINE message</li>
+            <li>Hands-on with ESP32 + MQTT</li>
+            <li>Practiced edge-to-cloud data flow</li>
           </ul>
           <div class="stack">
-            <span class="chip">ESP32</span><span class="chip">MQTT</span><span class="chip">Gemini</span>
+            <span class="chip">ESP32</span><span class="chip">MQTT</span><span class="chip">Python</span>
           </div>
         </article>
 
